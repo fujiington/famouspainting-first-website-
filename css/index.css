@@ -1,0 +1,180 @@
+  .davinci header, .vangogh header, .links header{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            width: 10%;
+            height: 10%;
+            margin: 0;
+            padding: 0;
+        }
+        head, body, figure{   
+            background-color: rgb(64, 63, 63);
+        } 
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); 
+            z-index: 999;
+            display: block; 
+            pointer-events: all; 
+        }
+        
+        .cookie-popup {
+            position: fixed;
+            bottom: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            z-index: 1000; 
+            max-width: 700px;
+            width: 90%;
+            max-height: 50vh;
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        .cookie-popup p {
+            margin: 0 0 25px;
+            font-size: 16px;
+            color: #e0e0e0;
+            line-height: 1.6; 
+        }
+        
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; 
+        }
+        
+        .cookie-popup button {
+            padding: 14px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        }
+        
+        .cookie-popup button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+        }
+        
+        #accept-all {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        #accept-all:hover {
+            background-color: #45a049;
+        }
+        
+        #accept-minimal {
+            background-color: #ff9800;
+            color: white;
+        }
+        
+        #accept-minimal:hover {
+            background-color: #e68900;
+        }
+        
+        #decline-cookies {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        #decline-cookies:hover {
+            background-color: #d32f2f;
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translate(-50%, 100%);
+                opacity: 0;
+            }
+            to {
+                transform: translate(-50%, 50%);
+                opacity: 1;
+            }
+        }
+
+        .davinci, .vangogh{
+            display: grid;
+            gap: 1rem;
+        }
+        /* TEXT TESTING */
+        .davinci h3, .davinci address, .davinci a, .vangogh h3, .vangogh address, .vangogh a{
+            color:rgb(255, 255, 255);
+        }
+        /* #region ALL FIGURES */
+        .davinci figure, .vangogh figure{
+            position: relative;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .davinci figcaption, .vangogh figcaption{
+            position: absolute;
+            background-color: #000000bb;
+            color: white;
+            bottom: 0;
+            top: 50%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            opacity: 0;
+            transition: 500ms;
+        }
+        .davinci figure:hover figcaption, .vangogh figure:hover figcaption{
+            opacity: 1;
+        }
+        .leo, .vincent{
+            display: flex;
+            gap: 2rem;
+        }
+        .Leonardo1, .Leonardo2, .gogh1, .gogh2{
+            display: block;
+            margin-left: 5rem;
+            margin-right: 5rem;
+            width: 50%;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .Leonardo1 p, .Leonardo2 p, .gogh1 p, .gogh2 p{
+            text-align: center;
+            width: 75%;
+            align-items: center;
+            margin: 0 auto;
+        }
+        /* #endregion */
+
+         /* MEDIA QUERIES */
+         /* OVER 800PX */
+         @media (min-width: 900px){
+            .davinci, .vangogh{
+            grid-template-columns: repeat(3, 1fr);
+        }
+        }
+        /* ARTIKEL START */
+        .artikel{
+            position: flex;
+            color: white;
+            background-color: #000000bb;
+        }
+        
